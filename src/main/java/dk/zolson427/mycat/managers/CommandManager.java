@@ -486,7 +486,7 @@ public class CommandManager {
             String healthString = "";
             if (cat != null) {
                 double health = cat.getHealth();
-                AttributeInstance maxHealthInstance = cat.getAttribute(Attribute.GENERIC_MAX_HEALTH);
+                AttributeInstance maxHealthInstance = cat.getAttribute(Attribute.MAX_HEALTH);
                 double maxHealth;
                 if (maxHealthInstance != null) {
                     maxHealth = maxHealthInstance.getValue();
@@ -761,7 +761,7 @@ public class CommandManager {
         if (cat != null) {
             // Health graphics
             double health = cat.getHealth();
-            AttributeInstance maxHealthInstance = cat.getAttribute(Attribute.GENERIC_MAX_HEALTH);
+            AttributeInstance maxHealthInstance = cat.getAttribute(Attribute.MAX_HEALTH);
             double maxHealth;
             if (maxHealthInstance != null) {
                 maxHealth = maxHealthInstance.getValue();
@@ -777,7 +777,7 @@ public class CommandManager {
             sender.sendMessage(ChatColor.AQUA + "Health: " + healthString + ChatColor.AQUA + "" + ChatColor.BOLD + " [" + ChatColor.DARK_AQUA + df.format(health) +
                     ChatColor.AQUA + "" + ChatColor.BOLD + "/" + ChatColor.RESET + ChatColor.AQUA + df.format(maxHealth) + ChatColor.AQUA + "" + ChatColor.BOLD + "]");
 
-            AttributeInstance attackDamage = cat.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE);
+            AttributeInstance attackDamage = cat.getAttribute(Attribute.ATTACK_DAMAGE);
             sender.sendMessage(ChatColor.AQUA + "Damage: " + ChatColor.WHITE + (attackDamage != null ? attackDamage.getValue() : 0) + " HP");
         }
 

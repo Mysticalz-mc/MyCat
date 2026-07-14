@@ -270,7 +270,7 @@ public class CatMainListener implements Listener {
                 health = 10.0;
             }
 
-            AttributeInstance catMaxHealth = cat.getAttribute(Attribute.GENERIC_MAX_HEALTH);
+            AttributeInstance catMaxHealth = cat.getAttribute(Attribute.MAX_HEALTH);
 
             if (catMaxHealth != null && catMaxHealth.getValue() != health) {
                 catMaxHealth.setBaseValue(health);

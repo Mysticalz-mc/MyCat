@@ -3,7 +3,7 @@ package dk.zolson427.mycat.objects;
 import dk.zolson427.mycat.MyCat;
 
 public class LevelFactory {
-    private final MyCat plugin;
+    final MyCat plugin;
 
     public LevelFactory(MyCat plugin) {
         this.plugin = plugin;

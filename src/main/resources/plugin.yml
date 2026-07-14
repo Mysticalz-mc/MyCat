@@ -2,7 +2,7 @@ name: MyCat
 main: dk.zolson427.mycat.MyCat
 author: zolson427
 version: ${project.version}
-api-version: 1.13
+api-version: 1.21
 load: STARTUP
 description: Tamed cats!
 depend: []

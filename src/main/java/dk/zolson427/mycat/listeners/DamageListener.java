@@ -73,7 +73,7 @@ public class DamageListener implements Listener {
                     health = 10.0;
                 }
 
-                AttributeInstance catMaxHealth = cat.getAttribute(Attribute.GENERIC_MAX_HEALTH);
+                AttributeInstance catMaxHealth = cat.getAttribute(Attribute.MAX_HEALTH);
 
                 if (catMaxHealth != null && catMaxHealth.getValue() != health) {
                     catMaxHealth.setBaseValue(health);
@@ -116,7 +116,7 @@ public class DamageListener implements Listener {
                         case SALMON:
                         case SHULKER:
                         case SLIME:
-                        case SNOWMAN:
+                        case SNOW_GOLEM:
                         case SPIDER:
                         case ZOMBIE:
                         case SKELETON:
@@ -129,7 +129,7 @@ public class DamageListener implements Listener {
                             gainedExp = 5;
                             break;
                         case COW:
-                        case MUSHROOM_COW:
+                        case MOOSHROOM:
                         case PIG:
                         case SHEEP:
                         case WOLF:

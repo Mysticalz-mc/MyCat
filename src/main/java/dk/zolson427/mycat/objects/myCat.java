@@ -461,7 +461,7 @@ public class myCat {
     public String getCatCustomName() {
         if (MyCat.getCatManager().getCatsConfig().contains(catId.toString())) {
             if (MyCat.instance().useLevels && MyCat.instance().showLevelsInNametag) {
-                return (nameColor + catName + ChatColor.GRAY + " [" + ChatColor.GOLD + this.level + ChatColor.GRAY + "]" + (isAngry() ? ANGRY_MODE : DEFENCE_MODE));
+                return (nameColor + "[" + ChatColor.GOLD + this.catIdentifier + ChatColor.GRAY + "] " + ChatColor.RESET + catName + ChatColor.GRAY + " [" + ChatColor.GOLD + "Lv: " + this.level + ChatColor.GRAY + "]" + (isAngry() ? ANGRY_MODE : DEFENCE_MODE));
             }
             else {
                 return nameColor + catName;
@@ -540,7 +540,7 @@ public class myCat {
             health = 5D;
         }
 
-        AttributeInstance catMaxHealth = cat.getAttribute(Attribute.GENERIC_MAX_HEALTH);
+        AttributeInstance catMaxHealth = cat.getAttribute(Attribute.MAX_HEALTH);
         if (catMaxHealth == null) {
             return false;
         }
@@ -577,7 +577,7 @@ public class myCat {
             damage = 1.0D;
         }
 
-        AttributeInstance catDamage = cat.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE);
+        AttributeInstance catDamage = cat.getAttribute(Attribute.ATTACK_DAMAGE);
         if (catDamage == null) {
             return false;
         }
