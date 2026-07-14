@@ -4,6 +4,7 @@
 Tamed cats.
 
 A fork of MyDog.
+A fork/update of MyCat by Zolson427
 
 ___
 
